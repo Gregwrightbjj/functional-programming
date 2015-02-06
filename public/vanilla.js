@@ -5,6 +5,10 @@
   It should not use underscore.
 */
 var uppercase = function(array){
+  var a =[];
+    for(var i=0; i < array.length; i++){
+    a.push(array[i].toUpperCase());
+  }return a;
 
 }
 
@@ -15,7 +19,10 @@ var uppercase = function(array){
   It should not use underscore.
 */
 var sort = function(array){
-
+  var a =[];
+    for(var i=0; i < array.length; i++){
+    a.push(array[i]);
+  }return a;
 }
 
 /*
@@ -23,7 +30,10 @@ var sort = function(array){
   It should return an array of objects that contain the property "name".
 */
 var namesOnly = function(array) {
-
+    var a =[];
+    for(var i=0; i < array.length; i++){
+    a.push(array[i]);
+  }return a;
 }
 
 /*
@@ -31,9 +41,15 @@ var namesOnly = function(array) {
   It should return the first number that is evenly divisible by 5.
 */
 var firstFive = function(array) {
-
+var a =[];
+    for(var i=0; i < array.length; i++){
+    if( array[i] % 5 == 0){
+      a.push(array[i])
+    } 
+  }return a[0];
 }
 
+      
 /*
   This function should accept an array of numbers a parameter.
   It should return the sum of all ODD numbers in the array.

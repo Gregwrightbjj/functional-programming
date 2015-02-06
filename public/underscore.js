@@ -4,9 +4,11 @@
 
   It SHOULD use underscore.
 */
-var underscoreUppercase = function(array){
 
-}
+var underscoreUppercase = function(array){
+  var y =  _.map(array, function(word){return word.toUpperCase();});
+ return y;
+ }
 
 /*
   This function should accept an array of numbers as a parameter.
@@ -15,8 +17,9 @@ var underscoreUppercase = function(array){
   It SHOULD use underscore.
 */
 var underscoreSort = function(array){
-
-}
+  var f = _.sortBy(array, function(b){ return b;});
+return f.reverse();
+} 
 
 /*
   This function should accept an array of objects as a parameter.
@@ -25,6 +28,9 @@ var underscoreSort = function(array){
   It SHOULD use underscore.
 */
 var underscoreNamesOnly = function(array) {
+    return _.pluck(array, function(b){ return ["name"];});
+
+      
 
 }
 
@@ -35,8 +41,12 @@ var underscoreNamesOnly = function(array) {
   It SHOULD use underscore.
 */
 var underscoreFirstFive = function(array) {
+      var dd = array.filter(function(num){ 
+        return num % 5 == 0; });
+      return dd[0];
 
 }
+
 
 /*
   This function should accept an array of numbers a parameter.
@@ -46,5 +56,9 @@ var underscoreFirstFive = function(array) {
   It SHOULD use underscore.
 */
 var underscoreSumOdd = function(array) {
+  var ee = array.filter(function(num){ 
+        return num % 2 !== 0; });
+    
 
+      return ee;
 }
