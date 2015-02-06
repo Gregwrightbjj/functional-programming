@@ -17,7 +17,7 @@ var underscoreUppercase = function(array){
   It SHOULD use underscore.
 */
 var underscoreSort = function(array){
-  var f = _.sortBy(array, function(b){ return b;});
+  var f = _.sortBy(array);
 return f.reverse();
 } 
 
@@ -28,10 +28,10 @@ return f.reverse();
   It SHOULD use underscore.
 */
 var underscoreNamesOnly = function(array) {
-    return _.pluck(array, function(b){ return ["name"];});
-
-      
-
+    
+    return _.filter(array, function(num){ return num.name;});
+    
+     
 }
 
 /*
@@ -58,7 +58,11 @@ var underscoreFirstFive = function(array) {
 var underscoreSumOdd = function(array) {
   var ee = array.filter(function(num){ 
         return num % 2 !== 0; });
-    
+  
 
-      return ee;
+  var sum = _.reduce(ee, function(memory, num){
+    return memory + num;
+  }, 0)
+
+      return sum;
 }
