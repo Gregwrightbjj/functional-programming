@@ -62,7 +62,7 @@ var underscoreSumOdd = function(array) {
 
   var sum = _.reduce(ee, function(memory, num){
     return memory + num;
-  }, 0)
+  }, 0);
 
       return sum;
 }

@@ -30,10 +30,7 @@ var sort = function(array){
   It should return an array of objects that contain the property "name".
 */
 var namesOnly = function(array) {
-    var a =[];
-    for(var i=0; i < array.length; i++){
-    a.push(array[i]);
-  }return a ;
+   return _.filter(array, function(stuff){return stuff.name;});
 }
 
 /*
@@ -56,12 +53,10 @@ var a =[];
     (Ignore the even numbers.)
 */
 var sumOdd = function(array) {
-var a = [0];
-
-for(var i = 0; i< array.length; i++){
-if (array[i] % 2 !==0){
-  a.push(array[i]) ;
-  
-}
-}return a;
+  var ee = array.filter(function(num){
+    return num % 2 !== 0;});
+  var sum= _.reduce(ee,function(memory, num){
+    return memory + num;
+  },0);
+  return sum;
 }
